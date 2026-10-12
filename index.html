@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Vijay Bagla | Operations Head</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#0a0a0a;--mute:#5c5c5c;--line:#dcdcdc;--d:"Archivo","Arial Narrow",Arial,sans-serif;--b:"Source Sans 3","Segoe UI",Arial,sans-serif;
+box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 var(--b);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.w{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav .w{display:flex;justify-content:space-between;align-items:center;height:58px}
+nav b{font:900 20px var(--d);font-stretch:125%;letter-spacing:-.02em}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-size:16px;font-weight:600;position:relative}
+nav ul a:after{content:"";position:absolute;left:0;bottom:-3px;height:2px;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav ul a:hover:after{transform:scaleX(1)}
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 24px 60px;position:relative}
+.hero h1{margin:0;font:800 clamp(34px,9.5vw,112px)/1.05 var(--d);font-stretch:110%;letter-spacing:-.035em;white-space:nowrap}
+.hero h1 span.l{display:block;overflow:hidden;padding:.06em 0}
+.hero h1 i{display:inline-block;font-style:normal;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*60ms + 150ms)}
+@keyframes up{to{transform:none}}
+.role{margin:26px 0 12px;font:700 clamp(18px,3vw,26px) var(--d);font-stretch:110%;opacity:0;animation:fade .8s 1.1s forwards}
+.desc{max-width:58ch;margin:0 auto;color:var(--mute);font-size:19px;opacity:0;animation:fade .8s 1.3s forwards}
+.cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fade .8s 1.5s forwards}
+@keyframes fade{to{opacity:1}}
+.btn{padding:13px 24px;border:2px solid var(--ink);text-decoration:none;font-weight:600;transition:background .25s,color .25s}
+.btn.f{background:var(--ink);color:#fff}.btn.f:hover{background:#fff;color:var(--ink)}
+.btn.o:hover{background:var(--ink);color:#fff}
+/* sections */
+section{padding:96px 0}
+h2{font:900 clamp(36px,7vw,76px)/1 var(--d);font-stretch:118%;letter-spacing:-.03em;margin:0 0 32px}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s ease}
+.rv.on{opacity:1;transform:none}
+/* about */
+.about p.big{font:600 clamp(24px,4vw,40px)/1.25 var(--d);letter-spacing:-.02em;max-width:26em;margin:0}
+.hub{margin:56px auto 0;max-width:680px}
+.hub svg{width:100%;height:auto;display:block}
+.hub .ln{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:240;stroke-dashoffset:240;transition:stroke-dashoffset 1.2s ease}
+.hub.on .ln{stroke-dashoffset:0}
+.hub .nd{fill:#fff;stroke:var(--ink);stroke-width:1.5;opacity:0;transition:opacity .6s .9s}
+.hub.on .nd,.hub.on .nt{opacity:1}
+.hub .nt{fill:var(--ink);font:600 16px var(--b);text-anchor:middle;dominant-baseline:middle;opacity:0;transition:opacity .6s .9s}
+.hub .ce{fill:var(--ink)}.hub .ct{fill:#fff;font:800 16px var(--d);text-anchor:middle}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:64px;border-top:2px solid var(--ink)}
+.stat{padding:24px 0;border-bottom:1px solid var(--line)}
+.stat b{display:block;font:900 clamp(54px,9vw,96px)/1 var(--d);font-stretch:118%;letter-spacing:-.04em}
+.stat span{color:var(--mute)}
+/* achievements */
+.ach{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:0;border-left:1px solid var(--ink);border-top:1px solid var(--ink)}
+.card{padding:30px 26px 34px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);transition:background .35s,color .35s}
+.card h3{font:800 22px/1.2 var(--d);margin:0 0 10px;letter-spacing:-.01em}
+.card p{margin:0;color:var(--mute);transition:color .35s}
+.card:hover{background:var(--ink);color:#fff}.card:hover p{color:#cfcfcf}
+/* timeline */
+.tl{position:relative;padding-left:44px}
+.tl:before{content:"";position:absolute;left:8px;top:6px;bottom:0;width:2px;background:var(--line)}
+.tl .prog{position:absolute;left:8px;top:6px;width:2px;height:0;background:var(--ink)}
+.it{position:relative;padding-bottom:44px}
+.it:before{content:"";position:absolute;left:-44px;top:8px;width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid var(--line);transition:border-color .4s,background .4s}
+.it.on:before{border-color:var(--ink);background:var(--ink)}
+.yr{font:900 clamp(30px,5vw,48px)/1 var(--d);font-stretch:118%;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.it h3{font:800 24px/1.2 var(--d);margin:8px 0 2px}
+.it .co{color:var(--mute);margin:0 0 8px}
+.it ul{margin:0;padding-left:18px;max-width:64ch}
+.it li{margin-bottom:4px}
+.it.sm h3{font-size:20px}.it.sm{padding-bottom:30px}
+/* skills */
+.sk{background:var(--ink);color:#fff;padding:96px 0;overflow:hidden}
+.sk h2{padding:0 24px;max-width:1040px;margin:0 auto 40px}
+.row{display:flex;width:max-content;gap:14px;margin-bottom:14px;animation:mq 60s linear infinite}
+.row.r{animation-direction:reverse;animation-duration:75s}
+.sk:hover .row{animation-play-state:paused}
+.row span{border:1.5px solid #fff;padding:12px 26px;font:700 clamp(18px,2.6vw,26px) var(--d);font-stretch:108%;white-space:nowrap;transition:background .25s,color .25s}
+.row span:hover{background:#fff;color:var(--ink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.sk .grp{max-width:1040px;margin:44px auto 0;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;color:#cfcfcf}
+.sk .grp b{color:#fff;font:800 18px var(--d);display:block;margin-bottom:4px}
+/* edu */
+.edu{list-style:none;margin:0;padding:0}
+.edu li{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.edu span{color:var(--mute);white-space:nowrap}
+/* contact */
+.ct .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:44px;border-top:2px solid var(--ink);padding-top:24px}
+.ct .info b{display:block;font:800 18px var(--d);margin-bottom:2px}
+.ct .info a,.ct .info span{color:var(--mute);text-decoration:none}
+.ct .info a:hover{color:var(--ink);text-decoration:underline}
+footer{padding:30px 0 50px;color:var(--mute);border-top:1px solid var(--line);font-size:15px}
+@media(max-width:640px){nav ul{gap:14px}nav a{font-size:14px}nav b{font-size:17px}.edu li{flex-direction:column;gap:0}section,.sk{padding:72px 0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.hero h1 i,.role,.desc,.cta,.rv{opacity:1;transform:none}.big .wd{opacity:1}.hub .ln{stroke-dashoffset:0}.hub .nd,.hub .nt{opacity:1}.row{flex-wrap:wrap;width:auto;padding:0 24px}}
+.btn{font:600 18px var(--b);background:none;color:var(--ink);cursor:pointer}.btn.f{color:#fff;background:var(--ink)}.btn.f:hover{background:#fff;color:var(--ink)}
+dialog.rs{border:0;padding:0;width:min(860px,94vw);max-height:92vh;background:#fff;color:var(--ink);box-shadow:0 20px 70px rgba(0,0,0,.4)}
+dialog.rs::backdrop{background:rgba(0,0,0,.62)}
+.rs .hd{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:#fff;padding:12px 20px}
+.rs .hd b{font:800 17px var(--d)}
+.rs .x{background:none;border:1.5px solid #fff;color:#fff;font:600 15px var(--b);padding:6px 14px;cursor:pointer}
+.rs .x:hover{background:#fff;color:var(--ink)}
+.rs .pg{padding:34px clamp(18px,5vw,48px) 40px;font-size:15.5px;line-height:1.5}
+.rs .nm{font:900 34px var(--d);font-stretch:110%;text-align:center;letter-spacing:-.02em;margin:0}
+.rs .ct2{text-align:center;color:var(--mute);margin:4px 0 6px}
+.rs h4{font:800 17px var(--d);margin:18px 0 8px;padding-bottom:3px;border-bottom:2px solid var(--ink)}
+.rs .jb{display:flex;justify-content:space-between;gap:12px;font-weight:600;margin-top:10px}
+.rs .jb span:last-child{white-space:nowrap;font-weight:400;color:var(--mute)}
+.rs ul{margin:3px 0 0;padding-left:18px}.rs li{margin-bottom:2px}
+.rs p{margin:0}
+@media(max-width:560px){.rs .jb{flex-direction:column;gap:0}}
+
+/* ---- attractive motion layer ---- */
+.hero{isolation:isolate}
+.hero:before{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:min(1100px,125vw);aspect-ratio:1;border-radius:50%;translate:-50% calc(-50% + var(--py,0px));pointer-events:none;
+ background:repeating-radial-gradient(circle,transparent 0 58px,rgba(0,0,0,.08) 58px 59px);-webkit-mask-image:radial-gradient(circle,#000 18%,transparent 66%);mask-image:radial-gradient(circle,#000 18%,transparent 66%);animation:breathe 9s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(.92)}50%{transform:scale(1.08)}}
+.role{background:linear-gradient(100deg,#0a0a0a 38%,#a3a3a3 50%,#0a0a0a 62%) 200% 0/260% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:fade .8s 1.1s forwards,shine 4.5s 2.2s linear infinite}
+@keyframes shine{to{background-position:-100% 0}}
+nav{transition:transform .4s ease}nav.hide{transform:translateY(-100%)}
+.rv{transition:opacity .8s var(--dl,0s),transform .8s var(--dl,0s) cubic-bezier(.2,.8,.2,1)}
+.card.rv:not(.on),.stat.rv:not(.on){transform:translateY(26px) scale(.97)}
+.it.rv:not(.on){transform:translateX(-28px)}
+h2.rv{letter-spacing:.02em;transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1),letter-spacing 1.1s cubic-bezier(.2,.8,.2,1)}
+h2.rv.on{letter-spacing:-.03em}
+.card{background:linear-gradient(var(--ink),var(--ink)) no-repeat left bottom/100% 0;transition:opacity .8s var(--dl,0s),transform .8s var(--dl,0s) cubic-bezier(.2,.8,.2,1),background-size .45s ease,color .35s}
+.card:hover{background:linear-gradient(var(--ink),var(--ink)) no-repeat left bottom/100% 100%;color:#fff}
+.card h3{transition:transform .4s}.card:hover h3{transform:translateX(8px)}
+.stat b{transition:transform .4s}.stat:hover b{transform:translateX(10px)}
+.btn.o{background:linear-gradient(var(--ink),var(--ink)) no-repeat left center/0 100%;transition:background-size .4s ease,color .3s,transform .25s,box-shadow .25s}
+.btn.o:hover{background:linear-gradient(var(--ink),var(--ink)) no-repeat left center/100% 100%;color:#fff;transform:translateY(-3px);box-shadow:0 8px 0 rgba(0,0,0,.12)}
+.btn.f{background:linear-gradient(#fff,#fff) no-repeat left center/0 100% var(--ink);transition:background-size .4s ease,color .3s,transform .25s,box-shadow .25s}
+.btn.f:hover{background:linear-gradient(#fff,#fff) no-repeat left center/100% 100% var(--ink);color:var(--ink);transform:translateY(-3px);box-shadow:0 8px 0 rgba(0,0,0,.12)}
+.hub .nd rect{animation:sw 3.6s ease-in-out infinite}
+.hub .nd rect:nth-child(2){animation-delay:.5s}.hub .nd rect:nth-child(3){animation-delay:1s}.hub .nd rect:nth-child(4){animation-delay:1.5s}.hub .nd rect:nth-child(5){animation-delay:2s}.hub .nd rect:nth-child(6){animation-delay:2.5s}.hub .nd rect:nth-child(7){animation-delay:3s}
+@keyframes sw{0%,100%{stroke-width:1.5}50%{stroke-width:3.4}}
+.pring{fill:none;stroke:#0a0a0a;stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:ping 2.8s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.55}100%{transform:scale(2);opacity:0}}
+.it .yr{transition:color .8s}.it.on .yr{color:var(--ink)}
+.it.on:before{animation:dot 1.3s ease-out 1}
+@keyframes dot{0%{box-shadow:0 0 0 0 rgba(0,0,0,.4)}100%{box-shadow:0 0 0 16px rgba(0,0,0,0)}}
+.row{animation-duration:45s}.row.r{animation-duration:55s}
+.row span{transition:background .25s,color .25s,transform .3s}.row span:hover{transform:translateY(-4px)}
+dialog.rs[open]{animation:pop .4s cubic-bezier(.2,.8,.2,1)}
+dialog.rs[open]::backdrop{animation:bd .4s ease}
+@keyframes pop{from{opacity:0;transform:translateY(28px) scale(.97)}}
+@keyframes bd{from{opacity:0}}
+.ct .info>div{transition:transform .35s}.ct .info>div:hover{transform:translateY(-4px)}
+@media(prefers-reduced-motion:reduce){.pk,.pring,.hero:before{display:none}.role{-webkit-text-fill-color:currentColor;background:none}h2.rv{letter-spacing:-.03em}}
+</style>
+</head>
+<body>
+<nav><div class="w"><b>VB</b><ul><li><a href="#about">About</a></li><li><a href="#wins">Achievements</a></li><li><a href="#journey">Journey</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero">
+  <h1 aria-label="Vijay Bagla"><span class="l" id="n1" aria-hidden="true">Vijay Bagla</span></h1>
+  <p class="role">Operations Head</p>
+  <p class="desc">15+ years in automotive sheet metal, press, and welding. I run the plant end to end, from purchase and stores to production, quality, NPD, and the tool room.</p>
+  <div class="cta"><a class="btn f" href="#contact">Get in touch</a><button type="button" class="btn o" data-open>View resume</button></div>
+</header>
+
+<section id="about" class="about"><div class="w">
+  <h2 class="rv">About</h2>
+  <p class="big" id="big">I started on the shop floor and grew into running the whole plant. Every department, every approval, one clear point of decision, so work moves fast and quality stays high.</p>
+  <div class="hub rv" id="hub">
+    <svg viewBox="0 0 640 400" role="img" aria-label="Operations Head connected to MRM, Purchase, Stores, Tool Room, NPD, Quality and Production">
+      <g class="ln"><line x1="320" y1="200" x2="320" y2="50"/><line x1="320" y1="200" x2="515" y2="105"/><line x1="320" y1="200" x2="564" y2="235"/><line x1="320" y1="200" x2="428" y2="340"/><line x1="320" y1="200" x2="212" y2="340"/><line x1="320" y1="200" x2="76" y2="235"/><line x1="320" y1="200" x2="125" y2="105"/></g>
+      <g class="nd"><rect x="265" y="34" width="110" height="32"/><rect x="460" y="89" width="110" height="32"/><rect x="509" y="219" width="110" height="32"/><rect x="373" y="324" width="110" height="32"/><rect x="157" y="324" width="110" height="32"/><rect x="21" y="219" width="110" height="32"/><rect x="70" y="89" width="110" height="32"/></g>
+      <g class="nt"><text x="320" y="51">Production</text><text x="515" y="106">Quality</text><text x="564" y="236">NPD</text><text x="428" y="341">Tool Room</text><text x="212" y="341">Stores</text><text x="76" y="236">Purchase</text><text x="125" y="106">MRM</text></g>
+      <circle class="pring" cx="320" cy="200" r="52"/><circle class="pk" r="4.5" fill="#0a0a0a"><animateMotion dur="2.60s" begin="1.2s" repeatCount="indefinite" path="M320,200 L320,50"/></circle><circle class="pk" r="4.5" fill="#0a0a0a"><animateMotion dur="2.95s" begin="1.6s" repeatCount="indefinite" path="M320,200 L515,105"/></circle><circle class="pk" r="4.5" fill="#0a0a0a"><animateMotion dur="3.30s" begin="2.0s" repeatCount="indefinite" path="M320,200 L564,235"/></circle><circle class="pk" r="4.5" fill="#0a0a0a"><animateMotion dur="3.65s" begin="2.4s" repeatCount="indefinite" path="M320,200 L428,340"/></circle><circle class="pk" r="4.5" fill="#0a0a0a"><animateMotion dur="4.00s" begin="2.8s" repeatCount="indefinite" path="M320,200 L212,340"/></circle><circle class="pk" r="4.5" fill="#0a0a0a"><animateMotion dur="4.35s" begin="3.2s" repeatCount="indefinite" path="M320,200 L76,235"/></circle><circle class="pk" r="4.5" fill="#0a0a0a"><animateMotion dur="4.70s" begin="3.6s" repeatCount="indefinite" path="M320,200 L125,105"/></circle><circle class="ce" cx="320" cy="200" r="52"/><text class="ct" x="320" y="196">Operations</text><text class="ct" x="320" y="216">Head</text>
+    </svg>
+  </div>
+  <div class="stats">
+    <div class="stat rv"><b><span data-n="15">0</span>+</b><span>Years in manufacturing</span></div>
+    <div class="stat rv"><b><span data-n="7">0</span></b><span>Departments under one desk</span></div>
+    <div class="stat rv"><b><span data-n="7">0</span></b><span>Roles held, shop floor to Operations Head</span></div>
+  </div>
+</div></section>
+
+<section id="wins"><div class="w">
+  <h2 class="rv">Achievements</h2>
+  <div class="ach">
+    <div class="card rv"><h3>Shop floor to Operations Head</h3><p>Grew step by step from a production team member to leading the whole plant.</p></div>
+    <div class="card rv"><h3>Final approving authority</h3><p>Purchase, stores, production, quality, NPD, tool room, and MRM decisions all come through one desk.</p></div>
+    <div class="card rv"><h3>NPD for leading OEMs</h3><p>Trials, process validation, and production readiness for India Yamaha Motors and SKH Metals.</p></div>
+    <div class="card rv"><h3>Zero-rejection drive</h3><p>Led rework and rejection reduction using root cause analysis and 4M Gap Analysis.</p></div>
+    <div class="card rv"><h3>Defect elimination</h3><p>Part of the 3-member team that cut an oversize M6 thread defect.</p></div>
+    <div class="card rv"><h3>Robotic welding</h3><p>Assisted ABB robot teaching and programming for new part setups.</p></div>
+  </div>
+</div></section>
+
+<section id="journey"><div class="w">
+  <h2 class="rv">Journey</h2>
+  <div class="tl" id="tl"><div class="prog" id="prog"></div>
+    <div class="it rv"><div class="yr">2025 - 2026</div><h3>Operations Head</h3><p class="co">Chanda Enterprises Pvt. Ltd.</p><ul><li>Final approving authority, leading MRM, Purchase, Stores, Production, Quality, NPD, and Tool Room.</li><li>Team coordination for smooth material flow and on-time delivery.</li><li>Internal audits, preventive maintenance, and tool development.</li><li>Run Management Review Meetings and keep teams motivated.</li></ul></div>
+    <div class="it rv"><div class="yr">2024 - 2025</div><h3>Production Head</h3><p class="co">Chanda Enterprises Pvt. Ltd.</p><ul><li>Led press, welding, and sub-assembly operations with manpower planning.</li><li>Drove zero-rejection targets using root cause analysis and 4M Gap Analysis.</li><li>Owned OEE, SMED, and daily targets; led NPD for India Yamaha Motors and SKH Metals.</li><li>Mentored engineers and supervisors; led Kaizen and 5S drives.</li></ul></div>
+    <div class="it rv"><div class="yr">2022 - 2024</div><h3>Senior Engineer</h3><p class="co">Chanda Enterprises Pvt. Ltd.</p><ul><li>Troubleshot press operations and MIG/robotic (ABB) welding to minimize downtime.</li><li>Maintained 4M change documentation and process control.</li><li>Resolved recurring in-process quality issues at the root.</li><li>Supported OWS/OSIR documentation and NPD trial runs.</li></ul></div>
+    <div class="it rv"><div class="yr">2020 - 2022</div><h3>Production Engineer</h3><p class="co">Chanda Enterprises Pvt. Ltd.</p><ul><li>Handled manpower deployment and shift-wise production planning.</li><li>Implemented Kaizen and Poka-Yoke to reduce defects and improve line efficiency.</li><li>Maintained Root Cards for WIP tracking; assisted ABB robotic welding programming.</li><li>Part of the 3-member team that cut an oversize M6 thread defect.</li></ul></div>
+    <div class="it sm rv"><div class="yr">2018 - 2020</div><h3>Production Engineer</h3><p class="co">Admach Auto India Ltd.</p><ul><li>Planned press-shop production and manpower to meet daily and shift targets.</li><li>Monitored in-process quality and worked with Quality to reduce rejection and rework.</li></ul></div>
+    <div class="it sm rv"><div class="yr">2014 - 2018</div><h3>Production Supervisor</h3><p class="co">Hema Engineering Ind. Ltd., Haridwar</p><ul><li>Supervised press and sheet-metal lines for schedule and quality adherence.</li><li>Trained operators on process standards, 5S, and safe machine operation.</li></ul></div>
+    <div class="it sm rv"><div class="yr">2009 - 2011</div><h3>Team Member</h3><p class="co">Hero MotoCorp, Haridwar</p><ul><li>Worked as a team member on shop-floor production activities for assigned lines.</li><li>Followed quality and process checks as per OEM standards.</li></ul></div>
+  </div>
+</div></section>
+
+<div class="sk" id="skills">
+  <h2 class="rv">Skills</h2>
+  <div class="row" id="r1"><span>OEE</span><span>Kaizen</span><span>5S</span><span>Poka-Yoke</span><span>SMED</span><span>4M Analysis</span><span>NPD</span><span>Press Operations</span></div>
+  <div class="row r" id="r2"><span>Root Cause Analysis</span><span>DWM</span><span>MIG Welding</span><span>ABB Robotic Welding</span><span>Takt Time</span><span>Cycle Time</span><span>ERP</span><span>MS Office</span></div>
+  <div class="grp">
+    <div><b>Technical</b>OEE, 4M data analysis, lead, takt and cycle time, SMED, tool-setup time reduction, NPD.</div>
+    <div><b>Process and quality</b>Kaizen, 5S, Poka-Yoke, DWM, root cause analysis, MIG and ABB robotic welding, press operations.</div>
+    <div><b>Leadership</b>Team coordination, motivation, internal audits, preventive maintenance, tool development.</div>
+  </div>
+</div>
+
+<section id="edu"><div class="w">
+  <h2 class="rv">Education</h2>
+  <ul class="edu rv">
+    <li>Diploma in Mechanical Engineering, Delhi Institute of Engineering Studies<span>2014 | 69%</span></li>
+    <li>ITI, Mechanical Branch, Government College, Saharanpur<span>2008 | 80%</span></li>
+    <li>Senior Secondary (12th), UP Board<span>2014 | 76%</span></li>
+    <li>Matriculation (10th), UP Board<span>2004 | 67%</span></li>
+  </ul>
+</div></section>
+
+<section id="contact" class="ct"><div class="w">
+  <h2 class="rv">Let's talk</h2>
+  <a class="btn f rv" href="mailto:vijaybagla143@gmail.com">Send an email</a> <button type="button" class="btn o rv" data-open>View resume</button>
+  <div class="info rv">
+    <div><b>Phone</b><a href="tel:+919560633072">+91 95606 33072</a></div>
+    <div><b>Email</b><a href="mailto:vijaybagla143@gmail.com">vijaybagla143@gmail.com</a></div>
+    <div><b>Location</b><span>Faridabad, India</span></div>
+  </div>
+</div></section>
+<footer><div class="w">Vijay Bagla, Operations Head</div></footer>
+
+<dialog class="rs" id="rs" aria-labelledby="rsT">
+  <div class="hd"><b id="rsT">Resume</b><button type="button" class="x" id="rsX">Close</button></div>
+  <div class="pg">
+    <h3 class="nm">Vijay Bagla</h3>
+    <p class="ct2">vijaybagla143@gmail.com | +91 95606 33072 | Faridabad, India</p>
+    <h4>Summary</h4>
+    <p>Operations and production professional with 15+ years in automotive sheet metal, press, and welding. Progressed from Production Engineer to Operations Head at Chanda Enterprises, serving as the final approving authority across MRM, Purchase, Stores, Production, Quality, NPD, and Tool Room, along with manpower planning, internal audits, preventive maintenance, and continuous improvement (Kaizen, 5S, Poka-Yoke) for OEM customers including India Yamaha Motors and SKH Metals.</p>
+    <h4>Work Experience</h4>
+    <div class="jb"><span>Operations Head, Chanda Enterprises Pvt. Ltd.</span><span>2025 - 2026</span></div><ul><li>Final approving authority, leading MRM, Purchase, Stores, Production, Quality, NPD, and Tool Room.</li><li>Driving team coordination for smooth material flow and on-time delivery.</li><li>Conducting internal audits; planning preventive maintenance of machines, dies, and tools.</li><li>Overseeing tool development and Tool Room; leading MRM; motivating teams.</li></ul><div class="jb"><span>Production Head, Chanda Enterprises Pvt. Ltd.</span><span>2024 - 2025</span></div><ul><li>Led press, welding, and sub-assembly operations with manpower planning.</li><li>Drove zero-rejection and rework reduction via RCA and 4M Gap Analysis.</li><li>Owned OEE, SMED, and daily targets; led NPD for India Yamaha Motors and SKH Metals.</li></ul><div class="jb"><span>Senior Engineer, Chanda Enterprises Pvt. Ltd.</span><span>2022 - 2024</span></div><ul><li>Troubleshot press operations and MIG/robotic (ABB) welding; maintained 4M change documentation.</li><li>Resolved recurring quality issues; supported OWS/OSIR documentation and NPD trial runs.</li></ul><div class="jb"><span>Production Engineer, Chanda Enterprises Pvt. Ltd.</span><span>2020 - 2022</span></div><ul><li>Manpower deployment and shift planning; Kaizen and Poka-Yoke implementation.</li><li>Root Cards for WIP tracking; ABB robotic welding programming; M6 thread defect reduction (3-member team).</li></ul><div class="jb"><span>Production Engineer, Admach Auto India Ltd.</span><span>Apr 2018 - Sept 2020</span></div><ul><li>Press-shop planning and manpower deployment; coordinated with Quality on rejection and rework reduction.</li></ul><div class="jb"><span>Production Supervisor, Hema Engineering Ind. Ltd. (Haridwar)</span><span>Aug 2014 - Sept 2018</span></div><ul><li>Supervised press and sheet-metal lines; trained operators on 5S, process standards, and safe operation.</li></ul><div class="jb"><span>Team Member, Hero MotoCorp (Haridwar)</span><span>Feb 2009 - Oct 2011</span></div><ul><li>Team member on shop-floor production for assigned lines; followed OEM quality and process checks.</li></ul>
+    <h4>Education</h4>
+    <div class="jb"><span>Diploma in Mechanical Engineering, Delhi Institute of Engineering Studies</span><span>2014 | 69%</span></div>
+    <div class="jb"><span>ITI, Mechanical Branch, Government College, Saharanpur</span><span>2008 | 80%</span></div>
+    <div class="jb"><span>Senior Secondary (12th), UP Board</span><span>2014 | 76%</span></div>
+    <div class="jb"><span>Matriculation (10th), UP Board</span><span>2004 | 67%</span></div>
+    <h4>Skills</h4>
+    <p><b>Technical:</b> OEE, 4M data analysis, lead/takt/cycle time, SMED, tool-setup time reduction, NPD.</p>
+    <p><b>Process and quality:</b> Kaizen, 5S, Poka-Yoke, DWM, root cause analysis, MIG and ABB robotic welding, press operations.</p>
+    <p><b>Software:</b> MS Office, ERP.</p>
+  </div>
+</dialog>
+<script>
+(function(){
+  function split(id,off){var el=document.getElementById(id),t=el.textContent;el.textContent="";
+    for(var k=0;k<t.length;k++){var i=document.createElement("i");i.textContent=t[k]===" "?"\u00A0":t[k];i.style.setProperty("--i",k+off);el.appendChild(i);}}
+  split("n1",0);
+  
+  ["r1","r2"].forEach(function(id){var r=document.getElementById(id);r.innerHTML+=r.innerHTML;});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");
+    var c=e.target.querySelectorAll("[data-n]");c.forEach(count);io.unobserve(e.target);}});},{threshold:.15});
+  document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+  function count(s){var n=+s.dataset.n,t0=null;function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/1400,1);s.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+  var dlg=document.getElementById("rs"),last=null;
+  document.querySelectorAll("[data-open]").forEach(function(b){b.addEventListener("click",function(){last=b;dlg.showModal();dlg.scrollTop=0;});});
+  document.getElementById("rsX").addEventListener("click",function(){dlg.close();});
+  dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close();});
+  dlg.addEventListener("close",function(){if(last)last.focus();});
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll(".ach,.stats").forEach(function(g){[].slice.call(g.children).forEach(function(c,i){c.style.setProperty("--dl",(i*0.09)+"s");});});
+  var nav=document.querySelector("nav"),hero=document.querySelector(".hero"),h1=document.querySelector(".hero h1"),lastY=0;
+  function fx(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    nav.classList.toggle("hide",y>lastY&&y>220);lastY=y;
+    if(!reduce&&y<900){hero.style.setProperty("--py",(y*.12)+"px");h1.style.translate="0 "+(y*.16)+"px";h1.style.opacity=Math.max(1-y/650,0);}
+  }
+  window.addEventListener("scroll",fx,{passive:true});fx();
+  var tl=document.getElementById("tl"),prog=document.getElementById("prog"),items=[].slice.call(document.querySelectorAll(".it"));
+  function onScroll(){
+    
+    var vh=window.innerHeight,line=vh*.6;
+    var r=tl.getBoundingClientRect();prog.style.height=Math.min(Math.max(line-r.top,0),r.height-6)+"px";
+    items.forEach(function(it){it.classList.toggle("on",it.getBoundingClientRect().top<line)});
+  }
+  window.addEventListener("scroll",onScroll,{passive:true});window.addEventListener("resize",onScroll);onScroll();
+})();
+</script>
+</body>
+  </html>
